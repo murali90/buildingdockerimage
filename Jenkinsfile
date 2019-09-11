@@ -24,7 +24,7 @@ pipeline{
         }
         stage('building docker image'){
             steps{
-                "docker build . /target/*.war -t tomcat-hello-world:${env.Build_ID}"
+                "docker build . -t tomcat-hello-world:${env.Build_ID}"
                 
             }
         }
